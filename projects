@@ -1,0 +1,5 @@
+python -m venv .venv
+.venv\Scripts\activate
+pip install -e .[dev]
+pytest
+uvicorn library_api.main:app --reload
