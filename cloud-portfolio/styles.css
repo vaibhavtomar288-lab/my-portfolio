@@ -1,0 +1,97 @@
+:root {
+  --bg: #0b1120;
+  --surface: #121a33;
+  --text: #e6ebff;
+  --muted: #9bb0d3;
+  --accent: #5c7cd8;
+  --accent-soft: rgba(92, 124, 216, 0.16);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, sans-serif;
+  background: radial-gradient(circle at top, #192347 0%, #080b18 64%);
+  color: var(--text);
+}
+
+.container {
+  width: min(1080px, 92vw);
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.site-header {
+  background: linear-gradient(180deg, rgba(8, 11, 24, 0.95), rgba(18, 26, 51, 0.95));
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: clamp(2.5rem, 4vw, 4rem);
+}
+
+.site-header p {
+  color: var(--muted);
+  max-width: 650px;
+}
+
+.intro-card,
+.callout {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 1.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.service-card {
+  background: var(--surface);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 1.5rem;
+}
+
+.service-card h3 {
+  margin-top: 0;
+}
+
+.service-card p {
+  color: var(--muted);
+}
+
+.service-card ul {
+  padding-left: 1rem;
+  margin: 0.75rem 0 0;
+  color: var(--muted);
+}
+
+.callout {
+  text-align: center;
+}
+
+.callout .button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.9rem 1.8rem;
+  color: var(--text);
+  background: var(--accent);
+  border-radius: 999px;
+  text-decoration: none;
+}
+
+.site-footer {
+  padding: 1.5rem 0;
+  text-align: center;
+  color: var(--muted);
+}
